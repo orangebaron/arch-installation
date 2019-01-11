@@ -1,0 +1,4 @@
+#!/bin/zsh
+echo "#!/bin/zsh" > ~/heaven/bin/$1
+chmod +x ~/heaven/bin/$1
+vim ~/heaven/bin/$1

@@ -1,5 +1,6 @@
-find . -not -name '.git' -not -name 'exportfiles' -not -name 'importfiles' -not -name 'files' -delete
+#!/bin/zsh
 for x in $(cat files); do
-	cp ~/.$x $x
+	f=${x//\/}
+	rm -r $f 2> /dev/null
+	cp -r $x $f
 done
-cp -r ~/heaven/bin .

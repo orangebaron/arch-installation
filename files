@@ -1,4 +1,7 @@
-vimrc
-xinitrc
-zprofile
-zshrc
+/home/uwe/.vimrc
+/home/uwe/.xinitrc
+/home/uwe/.zprofile
+/home/uwe/.zshrc
+/home/uwe/heaven/bin
+/home/uwe/purgatory/dwm/config.h
+/home/uwe/purgatory/st/config.h

@@ -1,6 +1,6 @@
+#!/bin/zsh
 for x in $(cat files); do
-	rm ~/.$x
-	cp $x ~/.$x
+	f=${x//\/}
+	rm -r $x
+	cp -r $f $x
 done
-rm -r ~/heaven/bin
-cp -r bin ~/heaven
