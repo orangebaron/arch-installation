@@ -1,6 +1,6 @@
 #!/bin/zsh
 for x in $(cat files); do
 	f=${x//\/}
-	rm -r $x
+	rm -r $x 2> /dev/null
 	cp -r $f $x
 done
