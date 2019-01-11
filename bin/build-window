@@ -1,0 +1,6 @@
+#!/bin/zsh
+cd ~/purgatory/dwm
+vim config.h
+sudo make clean install
+cd ~
+startx

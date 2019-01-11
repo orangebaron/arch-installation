@@ -1,0 +1,5 @@
+find . -not -name '.git' -not -name 'exportfiles' -not -name 'importfiles' -not -name 'files' -delete
+for x in $(cat files); do
+	cp ~/.$x $x
+done
+cp -r ~/heaven/bin .
