@@ -1,5 +1,6 @@
 #!/bin/zsh
 todaysgreeting=`shuf -n 1 ~/purgatory/text/greetings`
+mkdir ~/purgatory/text/reminders 2> /dev/null
 while :
 do
 	touch ~/purgatory/text/remind
