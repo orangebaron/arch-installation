@@ -18,9 +18,20 @@ do
 	remind="$(cat ~/purgatory/text/remind)"
 
 	output="$todaysgreeting | $(date '+%a, %b %d, %Y, %I:%M %p')"
+
 	if [ -n "$remind" ]; then
 		output=">> $remind << | $output"
 	fi
+
+	battery="${${$(upower --dump | grep percentage | head -n 1)//\ }//percentage:}"
+	state="${${$(upower --dump | grep state | head -n 1)//\ }//state:}"
+	if [ "$state" = "charging" ]; then
+		battery="$battery C"
+	fi
+	if [ -n "$battery" ]; then
+		output="$output | $battery"
+	fi
+
 	xsetroot -name "$output"
 	sleep 1
 done
