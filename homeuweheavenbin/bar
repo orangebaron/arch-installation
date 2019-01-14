@@ -17,7 +17,7 @@ do
 	
 	remind="$(cat ~/purgatory/text/remind)"
 
-	output="$todaysgreeting | $(date '+%a, %b %d, %Y, %I:%M %p')"
+	output="$todaysgreeting | $(date '+%a %b %d %Y %I:%M %p')"
 
 	if [ -n "$remind" ]; then
 		output=">> $remind << | $output"

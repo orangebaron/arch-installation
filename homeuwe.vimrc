@@ -2,20 +2,20 @@ filetype plugin indent on
 
 colo elflord
 
-map <F2> :w<CR>
-map <F9> :tabp<CR>
-map <F10> :tabn<CR>
-map <F11> :w<CR>:make<CR>
-map <F12> :wq<CR>
+map <C-W> :w<CR>
+map <C-H> :tabp<CR>
+map <C-L> :tabn<CR>
+map <C-E> :w<CR>:make<CR>
+map <C-R> :wq<CR>
 
-imap <F2> <C-O><F2>
-imap <F9> <ESC><F9>
-imap <F10> <ESC><F10>
-imap <F11> <ESC><F11>
-imap <F12> <ESC><F12>
+imap <C-W> <C-O><C-W>
+imap <C-L> <ESC><C-L>
+imap <C-E> <ESC><C-E>
+imap <C-R> <ESC><C-R>
 
 set nu
 set rnu
+set exrc
 syntax on
 
 execute pathogen#infect()
