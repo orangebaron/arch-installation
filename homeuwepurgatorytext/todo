@@ -5,6 +5,9 @@ mac
 
 --etc
 vpn
+scanning
+
+--laptop
+android studio
 printing
-laptop android studio
-laptop git key
+haskell/cabal

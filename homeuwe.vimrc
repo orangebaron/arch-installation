@@ -3,15 +3,18 @@ filetype plugin indent on
 colo elflord
 
 map <C-W> :w<CR>
-map <C-H> :tabp<CR>
-map <C-L> :tabn<CR>
-map <C-E> :w<CR>:make<CR>
-map <C-R> :wq<CR>
+map <C-J> :tabp<CR>
+map <C-K> :tabn<CR>
+map <C-E> :wq<CR>
 
-imap <C-W> <C-O><C-W>
-imap <C-L> <ESC><C-L>
+imap <C-W> <ESC><C-W>
+imap <C-J> <ESC><C-J>
+imap <C-K> <ESC><C-K>
 imap <C-E> <ESC><C-E>
-imap <C-R> <ESC><C-R>
+
+imap ,, <><LEFT>
+imap <C-H> <LEFT>
+imap <C-L> <RIGHT>
 
 set nu
 set rnu
