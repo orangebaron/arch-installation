@@ -1,0 +1,2 @@
+#!/bin/zsh
+youtube-dl --extract-audio --audio-format mp3 -i -o "%(playlist_index)s - %(title)s.%(ext)s" "$1"

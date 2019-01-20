@@ -1,0 +1,6 @@
+#!/bin/zsh
+numzeros="$(echo "2\n1" | dmenu -p "How many 0s?")"
+echo $numzeros
+zeros="$(printf "0%.0s" {1..$numzeros})"
+echo $zeros
+youtube-dl --extract-audio --audio-format mp3 -i -o "$(echo $zeros)1 - %(title)s.%(ext)s" "$1"
