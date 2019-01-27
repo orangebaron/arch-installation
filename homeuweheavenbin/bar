@@ -1,27 +1,8 @@
 #!/bin/zsh
 todaysgreeting=`shuf -n 1 ~/purgatory/text/greetings`
-mkdir ~/purgatory/text/reminders 2> /dev/null
 while :
 do
-	touch ~/purgatory/text/remind
-
-	a="$(date +%s)"
-	for i in $( ls ~/purgatory/text/reminders ); do
-		now="$(date +%s)"
-		time="$(date -d "$(cat ~/purgatory/text/reminders/$i)" +%s)"
-		if [ $now -ge $time ]; then
-			echo -n $i " " >> ~/purgatory/text/remind
-			rm ~/purgatory/text/reminders/$i
-		fi
-	done
-	
-	remind="$(cat ~/purgatory/text/remind)"
-
 	output="$todaysgreeting | $(date '+%a %b %d %Y %I:%M %p')"
-
-	if [ -n "$remind" ]; then
-		output=">> $remind << | $output"
-	fi
 
 	battery="${${$(upower --dump | grep percentage | head -n 1)//\ }//percentage:}"
 	state="${${$(upower --dump | grep state | head -n 1)//\ }//state:}"
